@@ -19,7 +19,7 @@ export default class RecordStoreService implements IRecordStoreService {
         return await this.repository.findAll();
     }
 
-    async findById(id: String): Promise<IRecordStore | null> {
+    async findById(id: String): Promise<IRecordStore> {
         const recordStore = await this.repository.findById(id);
         if (!recordStore) throw new NotFoundError('record store not found');
         return recordStore;

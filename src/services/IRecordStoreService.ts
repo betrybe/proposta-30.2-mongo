@@ -3,7 +3,7 @@ import { IRecordStore } from "../models/RecordStore";
 export default interface IRecordStoreService {
     create(recordStore: IRecordStore): Promise<IRecordStore>;
     findAll(): Promise<IRecordStore[]>;
-    findById(id: String): Promise<IRecordStore | null>;
+    findById(id: String): Promise<IRecordStore>;
     updateByYearAndFormat(year: Number, format: String): Promise<IRecordStore[]>
     deleteById(id: String): Promise<void>;
 }
